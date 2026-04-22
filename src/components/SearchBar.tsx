@@ -1,0 +1,23 @@
+interface SearchBarProps {
+  onSearch: (term: string) => void;
+}
+
+const SearchBar = ({ onSearch }: SearchBarProps) => {
+  return (
+    <div className="max-w-2xl mx-auto mb-10 px-4">
+      <div className="relative shadow-sm hover:shadow-md transition-shadow">
+        <input 
+          type="text" 
+          placeholder="Busca el alimento ideal para tu mascota..." 
+          className="w-full py-3 px-12 rounded-full border border-gray-200 focus:border-earthy-orange-500 focus:ring-2 focus:ring-earthy-orange-200 outline-none transition-all"
+          onChange={(e) => onSearch(e.target.value)}
+        />
+        <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBar;
