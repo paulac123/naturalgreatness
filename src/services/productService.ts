@@ -1,8 +1,7 @@
 import Papa from 'papaparse';
 import type { Product } from '../types/product';
 import { logger } from '../utils/logger';
-
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR__8q0aOUK0Auknh42mDyZmpMRmC_m14slrjGMpnF4axlGA8wCCqtVd_hDC1EhTzoPHJ2QQCCYPT0P/pub?output=csv';
+const SHEET_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL;
 
 export const fetchProducts = (): Promise<Product[]> => {
   logger.info('Iniciando descarga de productos desde Google Sheets...');

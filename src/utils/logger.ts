@@ -2,7 +2,7 @@
  * Utilidad simple de logging para Natural Greatness
  */
 
-const IS_DEV = import.meta.env.DEV;
+const IS_DEV = false; // Logs desactivados // import.meta.env.DEV;
 
 export const logger = {
   info: (message: string, data?: any) => {
