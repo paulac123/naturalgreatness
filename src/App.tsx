@@ -78,9 +78,9 @@ function App() {
 
           {/* Section Header */}
           <div className="container mx-auto px-8 lg:px-20 max-w-[1200px] mb-16 relative z-10">
-            <div className="flex flex-col lg:flex-row justify-between items-center pb-8 gap-8">
-              {/* Left Logo */}
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col lg:flex-row justify-between items-center pb-8 gap-8 text-center lg:text-left">
+              {/* Left Logo - Hidden on mobile, visible on desktop */}
+              <div className="hidden lg:flex items-center gap-4">
                 <div className="w-20 h-20 rounded-full bg-[#3b3585] flex items-center justify-center text-white shrink-0 shadow-md">
                   <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21.5C12 21.5 6 16 6 10C6 6.5 8.5 4 12 4C15.5 4 18 6.5 18 10C18 16 12 21.5 12 21.5Z" fill="#3b3585" stroke="white" strokeWidth="1.5" />
@@ -102,7 +102,7 @@ function App() {
               </div>
 
               {/* Right Quote */}
-              <div className="text-center lg:text-left max-w-sm">
+              <div className="text-center lg:text-left max-w-sm mx-auto lg:mx-0">
                 <h3 className="text-[#3b3585] font-black text-2xl lg:text-3xl uppercase leading-tight tracking-tight">
                   "FIND THE PERFECT<br />SUPPLEMENT FOR<br />YOUR GOALS"
                 </h3>

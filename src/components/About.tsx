@@ -26,24 +26,25 @@ const About = () => {
           {/* Left side - Images (Mano y Tarritos) */}
           <div className="w-full lg:w-[55%] relative flex justify-center items-center">
             {/* Contenedor con aspecto fijo para que mano y tarros escalen juntos */}
+              {/* Contenedor con aspecto fijo para que mano y tarros escalen juntos */}
             <div className="relative w-full aspect-square max-w-[700px]">
-              {/* Mano */}
+              {/* Mano: Ajustada para centrado en móvil y escala en desktop */}
               <img
                 src="/web page natural greatness HAND.png"
                 alt="Hand holding products"
-                className="absolute bottom-[-10%] left-[-15%] w-[115%] h-auto object-contain z-10"
+                className="absolute bottom-[-5%] left-[-5%] lg:bottom-[-10%] lg:left-[-15%] w-[110%] lg:w-[115%] h-auto object-contain z-10"
               />
-              {/* Tarritos */}
+              {/* Tarritos: Ajustados para caer sobre la mano en móvil */}
               <img
                 src="/web page natural greatness 1.png"
                 alt="Natural Greatness Products"
-                className="absolute top-[4%] left-[2%] w-[78%] h-auto object-contain z-20 hover:-translate-y-2 transition-transform duration-700 drop-shadow-xl"
+                className="absolute top-[8%] left-[12%] lg:top-[4%] lg:left-[2%] w-[75%] lg:w-[78%] h-auto object-contain z-20 hover:-translate-y-2 transition-transform duration-700 drop-shadow-xl"
               />
             </div>
           </div>
 
           {/* Right side - Content */}
-          <div className="w-full lg:w-[45%] flex flex-col items-start relative z-30 lg:pl-2 lg:pr-12 mt-12 lg:mt-0">
+          <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start relative z-30 lg:pl-2 lg:pr-12 mt-12 lg:mt-0 text-center lg:text-left">
             <h3 className="text-lg md:text-xl font-bold text-gray-500 mb-6">
               #1 Supplements in the world
             </h3>
@@ -52,16 +53,16 @@ const About = () => {
               “Complete well-<br />being, every day.”
             </h2>
 
-            <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed font-medium max-w-md">
+            <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed font-medium max-w-md mx-auto lg:mx-0">
               Supplements designed to support your overall health, combining science and quality
             </p>
 
-            <button className="bg-[#3b3585] hover:bg-[#2c2763] text-white font-bold text-xl py-3 px-10 transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest">
+            <button className="bg-[#3b3585] hover:bg-[#2c2763] text-white font-bold text-xl py-3 px-10 transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest mx-auto lg:mx-0">
               MORE INFO
             </button>
 
-            {/* Bottom Right Logo */}
-            <div className="mt-16 self-end flex items-center gap-4 mr-4">
+            {/* Bottom Right Logo - Centered on mobile, aligned right on desktop */}
+            <div className="mt-16 self-center lg:self-end flex items-center gap-4 mr-0 lg:mr-4">
               <div className="w-16 h-16 rounded-full bg-[#3b3585] flex items-center justify-center text-white relative overflow-hidden shadow-md">
                 <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
                   {/* Hojas simplificadas para el logo */}
@@ -70,7 +71,7 @@ const About = () => {
                   <path d="M12 21.5C12 21.5 16.5 16 16.5 10.5C16.5 7.5 14.5 5.5 12 5.5" stroke="white" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
-              <div className="flex flex-col leading-[1.05] text-[#3b3585] font-black text-4xl">
+              <div className="flex flex-col leading-[1.05] text-[#3b3585] font-black text-4xl text-left">
                 <span>Natural</span>
                 <span>Greatness</span>
               </div>
