@@ -19,33 +19,42 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
   const cleanDescription = stripMarkdown(product.description || '');
 
   return (
-    <div 
-      className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer"
+    <div
+      className="bg-[#f2f2f2] rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden flex flex-row p-5 gap-4 items-center group cursor-pointer transition-all duration-300 hover:-translate-y-1 h-[280px]"
       onClick={() => onClick(product)}
     >
-      <div className="relative h-64 bg-gray-50 overflow-hidden p-6">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+      {/* Left - Image */}
+      <div className="w-[45%] h-full relative rounded-2xl overflow-hidden flex items-center justify-center shrink-0">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-contain mix-blend-darken transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute top-3 right-3">
-          <span className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] font-bold text-earthy-orange-700 shadow-sm uppercase tracking-wider">
-            {product.category}
-          </span>
-        </div>
+        {product.category && (
+          <div className="absolute top-2 left-2">
+            <span className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-[9px] font-bold text-[#3b3585] shadow-sm uppercase tracking-wider">
+              {product.category}
+            </span>
+          </div>
+        )}
       </div>
-      
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-gray-800 mb-2 truncate">{product.name}</h3>
-        <p className="text-sm text-gray-500 line-clamp-2 mb-4 h-10">{cleanDescription}</p>
-        
-        <div className="flex justify-between items-center">
-          <span className="text-2xl font-black text-earthy-orange-600">${product.price}</span>
-          <button className="bg-earthy-orange-600 hover:bg-earthy-orange-700 text-white p-2 rounded-lg shadow-sm hover:shadow transition-all">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-            </svg>
+
+      {/* Right - Content */}
+      <div className="w-[55%] flex flex-col justify-between h-full py-1">
+        <div>
+          <h3 className="text-xl md:text-[1.35rem] font-black text-gray-900 leading-tight mb-2 pr-1 tracking-tight">
+            {/* Split name by spaces to encourage line breaks similar to the mock */}
+            {product.name}
+          </h3>
+          <p className="text-[0.7rem] md:text-xs text-gray-600 line-clamp-4 leading-snug font-medium mb-3 pr-2">
+            {cleanDescription}
+          </p>
+        </div>
+
+        <div className="flex flex-col items-end mt-auto gap-2">
+          <span className="text-xl font-black text-[#3b3585]">${product.price.toFixed(2)}</span>
+          <button className="bg-[#3b3585] hover:bg-[#2c2763] text-white text-[0.85rem] font-bold px-6 py-1.5 uppercase shadow-md transition-colors tracking-wide">
+            MORE INFO
           </button>
         </div>
       </div>

@@ -26,7 +26,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
         {/* Botón Cerrar (X) */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full text-gray-500 hover:text-earthy-orange-600 transition-colors shadow-sm"
+          className="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full text-gray-500 hover:text-[#3b3585] transition-colors shadow-sm"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -34,7 +34,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
         </button>
 
         {/* Imagen a la izquierda */}
-        <div className="md:w-1/2 h-64 md:h-auto bg-gray-50 p-4">
+        <div className="md:w-1/2 h-64 md:h-auto bg-[#eaeaea] p-4">
           <img 
             src={product.image} 
             alt={product.name} 
@@ -45,7 +45,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
         {/* Detalles a la derecha */}
         <div className="md:w-1/2 p-8 md:p-12 overflow-y-auto">
           <div className="mb-6">
-            <span className="inline-block px-3 py-1 bg-earthy-orange-100 text-earthy-orange-700 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+            <span className="inline-block px-3 py-1 bg-[#f4f7fc] text-[#3b3585] rounded-full text-xs font-bold uppercase tracking-wider mb-2">
               {product.category}
             </span>
             <h2 className="text-3xl font-black text-gray-900 leading-tight">{product.name}</h2>
@@ -70,14 +70,14 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
           <div className="flex flex-col sm:flex-row items-center gap-6 mt-auto">
             <div className="flex flex-col">
               <span className="text-sm text-gray-400 font-medium">Precio</span>
-              <span className="text-4xl font-black text-earthy-orange-600">${product.price}</span>
+              <span className="text-4xl font-black text-[#3b3585]">${product.price.toFixed(2)}</span>
             </div>
             
             <a 
               href={`https://wa.me/573184990091?text=${encodeURIComponent(`¡Hola! Me gustaría consultar la disponibilidad de: ${product.name}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:flex-1 py-4 bg-earthy-orange-600 hover:bg-earthy-orange-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all transform active:scale-95 text-center"
+              className="w-full sm:flex-1 py-4 bg-[#3b3585] hover:bg-[#2c2763] text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all transform active:scale-95 text-center uppercase tracking-wide"
             >
               Consultar Disponibilidad
             </a>

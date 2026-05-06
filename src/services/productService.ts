@@ -29,7 +29,17 @@ export const fetchProducts = (): Promise<Product[]> => {
             return {
               ...item,
               id: uniqueId,
-              price: parseFloat(item.price) || 0,
+              price: (() => {
+                const rawPrice = item.price || item.precio || item.Price || item.Precio || '0';
+                const cleanPrice = String(rawPrice).replace(/[^0-9.,]/g, '').replace(',', '.');
+                return parseFloat(cleanPrice) || 0;
+              })(),
+              keywords: (() => {
+                const rawKeywords = item.keywords || item.Keywords || item['Palabras clave'] || item.palabras_clave || '';
+                return rawKeywords 
+                  ? String(rawKeywords).split(',').map(k => k.trim().toLowerCase()).filter(k => k.length > 0) 
+                  : [];
+              })(),
               // Si no hay imagen, usamos un placeholder profesional
               image: item.image && item.image.trim() !== '' 
                 ? item.image 

@@ -8,8 +8,8 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
       <div className="relative shadow-sm hover:shadow-md transition-shadow">
         <input 
           type="text" 
-          placeholder="Busca el alimento ideal para tu mascota..." 
-          className="w-full py-3 px-12 rounded-full border border-gray-200 focus:border-earthy-orange-500 focus:ring-2 focus:ring-earthy-orange-200 outline-none transition-all"
+          placeholder="Buscar producto..." 
+          className="w-full py-3 px-12 rounded-full border border-gray-200 focus:border-[#3b3585] focus:ring-2 focus:ring-[#3b3585]/20 outline-none transition-all"
           onChange={(e) => onSearch(e.target.value)}
         />
         <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

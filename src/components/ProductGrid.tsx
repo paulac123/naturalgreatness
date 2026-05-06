@@ -8,8 +8,8 @@ interface ProductGridProps {
 
 const ProductGrid = ({ products, onProductClick }: ProductGridProps) => {
   return (
-    <div className="container mx-auto px-4 pb-20">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div className="pb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12">
         {products.map((product) => (
           <ProductCard 
             key={product.id} 
