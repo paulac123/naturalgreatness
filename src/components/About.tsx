@@ -1,16 +1,16 @@
 const About = () => {
   return (
-    <section id="nosotros" className="relative pt-32 pb-24 bg-gradient-to-br from-[#f8fbff] to-[#f0f4fa] overflow-hidden min-h-screen flex items-center">
-      {/* Background Images (Marca de Agua y Sombra/Textura) */}
+    <section id="nosotros" className="relative pt-32 pb-0 bg-gradient-to-br from-[#f8fbff] to-[#f0f4fa] overflow-hidden min-h-screen flex flex-col lg:flex-row lg:items-center">
+      {/* background images (marca de agua y sombra/textura) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Sombra / Textura (Esquina Superior Derecha) */}
+        {/* sombra / textura (esquina superior derecha) */}
         <img
           src="/web page natural greatness TEXTURA.png"
           alt="Background Shadow"
           className="absolute top-0 right-0 w-[80%] max-w-[900px] h-auto object-cover opacity-80 mix-blend-multiply pointer-events-none"
         />
 
-        {/* Marca de Agua */}
+        {/* marca de agua */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-10 mt-32">
           <img
             src="/web page natural greatness MARCA DE AGUA.png"
@@ -20,31 +20,26 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-8 lg:px-20 relative z-10 max-w-[1200px]">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-
-          {/* Left side - Images (Mano y Tarritos) */}
-          <div className="w-full lg:w-[55%] relative flex justify-center items-center">
-            {/* Contenedor con aspecto fijo para que mano y tarros escalen juntos */}
-              {/* Contenedor con aspecto fijo para que mano y tarros escalen juntos */}
-            <div className="relative w-full aspect-square max-w-[700px]">
-              {/* Mano: Ajustada para centrado en móvil y escala en desktop */}
+      <div className="container mx-auto px-8 lg:px-20 relative z-20 max-w-[1200px]">
+        <div className="flex flex-col lg:flex-row items-center justify-end">
+          
+          {/* content container */}
+          <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start mt-12 lg:mt-0 text-center lg:text-left">
+            
+            {/* mano solo para movil - ahora al principio de todo */}
+            <div className="lg:hidden w-full max-w-[320px] aspect-square relative mb-8 pointer-events-none">
               <img
                 src="/web page natural greatness HAND.png"
-                alt="Hand holding products"
-                className="absolute bottom-[-5%] left-[-5%] lg:bottom-[-10%] lg:left-[-15%] w-[110%] lg:w-[115%] h-auto object-contain z-10"
+                alt="Hand"
+                className="absolute bottom-0 left-0 w-[110%] h-auto object-contain"
               />
-              {/* Tarritos: Ajustados para caer sobre la mano en móvil */}
               <img
                 src="/web page natural greatness 1.png"
-                alt="Natural Greatness Products"
-                className="absolute top-[8%] left-[12%] lg:top-[4%] lg:left-[2%] w-[75%] lg:w-[78%] h-auto object-contain z-20 hover:-translate-y-2 transition-transform duration-700 drop-shadow-xl"
+                alt="Products"
+                className="absolute top-[8%] left-[12%] w-[67%] h-auto object-contain z-20"
               />
             </div>
-          </div>
 
-          {/* Right side - Content */}
-          <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start relative z-30 lg:pl-2 lg:pr-12 mt-12 lg:mt-0 text-center lg:text-left">
             <h3 className="text-lg md:text-xl font-bold text-gray-500 mb-6">
               #1 Supplements in the world
             </h3>
@@ -57,15 +52,17 @@ const About = () => {
               Supplements designed to support your overall health, combining science and quality
             </p>
 
-            <button className="bg-[#3b3585] hover:bg-[#2c2763] text-white font-bold text-xl py-3 px-10 transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest mx-auto lg:mx-0">
+            <a
+              href="#catalogo"
+              className="bg-[#3b3585] hover:bg-[#2c2763] text-white font-bold text-xl py-3 px-10 transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest mx-auto lg:mx-0 inline-block"
+            >
               MORE INFO
-            </button>
+            </a>
 
-            {/* Bottom Right Logo - Centered on mobile, aligned right on desktop */}
+            {/* bottom right logo */}
             <div className="mt-16 self-center lg:self-end flex items-center gap-4 mr-0 lg:mr-4">
               <div className="w-16 h-16 rounded-full bg-[#3b3585] flex items-center justify-center text-white relative overflow-hidden shadow-md">
                 <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
-                  {/* Hojas simplificadas para el logo */}
                   <path d="M12 21.5C12 21.5 6 16 6 10C6 6.5 8.5 4 12 4C15.5 4 18 6.5 18 10C18 16 12 21.5 12 21.5Z" fill="#3b3585" stroke="white" strokeWidth="1.5" />
                   <path d="M12 21.5C12 21.5 7.5 16 7.5 10.5C7.5 7.5 9.5 5.5 12 5.5" stroke="white" strokeWidth="2" strokeLinecap="round" />
                   <path d="M12 21.5C12 21.5 16.5 16 16.5 10.5C16.5 7.5 14.5 5.5 12 5.5" stroke="white" strokeWidth="2" strokeLinecap="round" />
@@ -77,6 +74,22 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* mano solo para escritorio - pegada al borde inferior izquierdo */}
+      <div className="hidden lg:flex absolute bottom-0 left-0 w-full lg:w-[60%] z-10 pointer-events-none items-end justify-start">
+        <div className="relative w-full aspect-square lg:max-w-[765px]">
+          <img
+            src="/web page natural greatness HAND.png"
+            alt="Hand"
+            className="absolute bottom-0 left-0 w-[120%] h-auto object-contain"
+          />
+          <img
+            src="/web page natural greatness 1.png"
+            alt="Products"
+            className="absolute top-[5%] left-[5%] w-[72%] h-auto object-contain z-20 hover:-translate-y-2 transition-transform duration-700 drop-shadow-2xl"
+          />
         </div>
       </div>
     </section>

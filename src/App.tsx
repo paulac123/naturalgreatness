@@ -66,9 +66,9 @@ function App() {
         <About />
 
         <section id="catalogo" className="pt-24 pb-20 relative min-h-screen overflow-hidden bg-[#f4f7fc]">
-          {/* Sombra Azul de Fondo */}
+          {/* sombra azul de fondo */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            {/* Sombra Derecha */}
+            {/* sombra derecha */}
             <img
               src="/web page natural greatness TEXTURA.png"
               alt=""
@@ -76,10 +76,10 @@ function App() {
             />
           </div>
 
-          {/* Section Header */}
+          {/* section header */}
           <div className="container mx-auto px-8 lg:px-20 max-w-[1200px] mb-16 relative z-10">
             <div className="flex flex-col lg:flex-row justify-between items-center pb-8 gap-8 text-center lg:text-left">
-              {/* Left Logo - Hidden on mobile, visible on desktop */}
+              {/* left logo - hidden on mobile, visible on desktop */}
               <div className="hidden lg:flex items-center gap-4">
                 <div className="w-20 h-20 rounded-full bg-[#3b3585] flex items-center justify-center text-white shrink-0 shadow-md">
                   <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12" xmlns="http://www.w3.org/2000/svg">
@@ -94,14 +94,14 @@ function App() {
                 </div>
               </div>
 
-              {/* Middle Title */}
+              {/* middle title */}
               <div className="flex-1 flex justify-center">
                 <h2 className="text-gray-500 font-medium text-lg tracking-widest mt-2">
                   PRODUCTS
                 </h2>
               </div>
 
-              {/* Right Quote */}
+              {/* right quote */}
               <div className="text-center lg:text-left max-w-sm mx-auto lg:mx-0">
                 <h3 className="text-[#3b3585] font-black text-2xl lg:text-3xl uppercase leading-tight tracking-tight">
                   "FIND THE PERFECT<br />SUPPLEMENT FOR<br />YOUR GOALS"
@@ -111,12 +111,12 @@ function App() {
           </div>
 
           <div className="container mx-auto px-8 lg:px-20 max-w-[1200px] relative z-10">
-            {/* Scroll Down Sidebar */}
+            {/* scroll down sidebar */}
             <div className="hidden xl:flex flex-col items-center absolute left-4 top-0 h-full">
               <span className="text-[#3b3585] font-black tracking-[0.6em] text-xl rotate-180" style={{ writingMode: 'vertical-rl' }}>
                 SCROLL DOWN
               </span>
-              {/* Flecha sólida hacia abajo */}
+              {/* flecha solida hacia abajo */}
               <svg className="mt-6 w-8 h-8 text-[#3b3585]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 10h-10v-10h-4v10h-10l12 12z" />
               </svg>
@@ -155,7 +155,7 @@ function App() {
       </main>
       <Footer />
 
-      {/* Ventana Emergente */}
+      {/* ventana emergente */}
       <ProductModal
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}

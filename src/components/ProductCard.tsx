@@ -1,12 +1,12 @@
 import type { Product } from '../types/product';
 
-// Elimina símbolos de Markdown para mostrar texto plano en las tarjetas
+// elimina simbolos de markdown para mostrar texto plano en las tarjetas
 const stripMarkdown = (text: string): string => {
   return text
-    .replace(/\*\*(.*?)\*\*/g, '$1') // Elimina **negritas**
-    .replace(/\*(.*?)\*/g, '$1')      // Elimina *cursivas*
-    .replace(/^[*\-]\s/gm, '')        // Elimina * o - al inicio de línea (listas)
-    .replace(/\n/g, ' ')              // Reemplaza saltos de línea por espacio
+    .replace(/\*\*(.*?)\*\*/g, '$1') // elimina negritas
+    .replace(/\*(.*?)\*/g, '$1')      // elimina cursivas
+    .replace(/^[*\-]\s/gm, '')        // elimina * o - al inicio de linea (listas)
+    .replace(/\n/g, ' ')              // reemplaza saltos de linea por espacio
     .trim();
 };
 
@@ -40,7 +40,7 @@ const ProductCard = ({ product, onClick }: ProductCardProps) => {
         )}
       </div>
 
-      {/* Content Container */}
+      {/* content container */}
       <div className="w-full md:w-[55%] flex flex-col justify-between h-full py-1 text-center md:text-left">
         <div>
           <h3 className="text-xl md:text-[1.35rem] font-black text-gray-900 leading-tight mb-2 pr-1 tracking-tight">
